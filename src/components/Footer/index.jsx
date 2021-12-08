@@ -1,41 +1,42 @@
 import React from 'react';
+import './footer.css'
 export default function Footer() {
     return (
 
         <div>
             <footer className="page-footer fixed-bottom">
-                <div className="">
-                    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#B6B8BB' }}>
-                        <a className="navbar-brand" href="#" style={{ fontWeight: '', marginLeft: 20 }}>Copyright @ 2020, PEXit</a>
+                <div className="navBar-">
+                    <nav className="navbar navbar-expand-lg navbar-light" >
+                        <a className="navbar-brand ml-20" href="#">Copyright @ 2020, PEXit</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className=""></span>
                         </button>
                         <div className="" id="navbarSupportedContent">
-                            <ul className="navbar-nav mr-auto justify-content-end" style={{ fontWeight: '', fontSize: 20, marginLeft: 750 }}>
+                            <ul className="navbar-nav">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="#" style={{ color: 'black' }}>About</a>
+                                    <a className="nav-link text-dark" href="#">About</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: 'black' }}>Support</a>
+                                    <a className="nav-link text-dark" href="#" >Support</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: 'black' }}>Terms</a>
+                                    <a className="nav-link text-dark" href="#" >Terms</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: 'black' }}>Pricing</a>
+                                    <a className="nav-link text-dark" href="#" >Pricing</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: 'black' }}>Partners</a>
+                                    <a className="nav-link text-dark" href="#" >Partners</a>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ color: 'black' }}>
+                                    <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ color: 'black' }}>
                                         Language
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a className="dropdown-item" href="#" style={{ color: 'black' }}>1</a>
-                                        <a className="dropdown-item" href="#" style={{ color: 'black' }}>2</a>
+                                        <a className="dropdown-item" href="#" >1</a>
+                                        <a className="dropdown-item" href="#" >2</a>
                                         <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href="style={{color:'black'}}">3</a>
+                                        <a className="dropdown-item text-dark" href="">3</a>
                                     </div>
                                 </li>
                             </ul>

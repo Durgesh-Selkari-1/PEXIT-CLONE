@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, Label, Input, Form } from 'reactstrap';
 import './loginPage.css';
-import { GoogleLoginButton, FacebookLoginButton, LinkedInLoginButton } from 'react-social-login-buttons';
+import logo from './../../assets/landingpage_img/logo.png'
+import Header from './../../components/Header';
+import Footer from '../Footer';
+
 
 export default function LoginPage() {
 
@@ -23,38 +26,43 @@ export default function LoginPage() {
 
     return (
         <>
-            <Form action="" onSubmit={submitForm} className="login-form" >
-                <h1>PEXit</h1>
-                <h3>Login</h3>
+            <Header />
 
-                <FormGroup>
-
-                    <div>
-                        <Label htmlFor="email">Email</Label><br />
-                        <Input type="email" name="email" id="email" autoComplete="off" value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-
-
-
-                        />
+            <Form className="login-form" onSubmit={submitForm}>
+                <div className="for-padding">
+                    <div className="mt-3"> <img src={logo} /> </div>
+                    <div className="mt-3">
+                        <p style={{ fontSize: 25 }}>Login</p>
                     </div>
-                </FormGroup>
+                    <FormGroup>
+                        <div>
+                            <Input type="email" name="email" id="email" autoComplete="off" value={email} placeholder="user name"
+                                onChange={(e) => setEmail(e.target.value)} className="form-input"
 
-                <FormGroup>
-                    <div>
-                        <Label htmlFor="password">Password</Label>
-                        <Input type="password" name="password" id="password" autoComplete="off" value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+                    </FormGroup>
+                    <FormGroup>
+                        <div>
 
-                        />
+                            <Input type="password" name="password" id="password" autoComplete="off" value={password} placeholder="password"
+                                onChange={(e) => setPassword(e.target.value)} className="form-input"
+
+
+                            />
+                        </div>
+                    </FormGroup>
+
+                    <Button type="submit" className="btn btn-lg btn-block" className="submit-button"><h4>Login</h4></Button><br />
+                    <div className="mt-4">
+                        <h4>---------------- or -----------------</h4>
                     </div>
-                </FormGroup>
-                <Button type="submit">Login</Button>
-                <GoogleLoginButton />
-                <FacebookLoginButton />
-                <LinkedInLoginButton />
-
+                    <Button type="submit" className="btn btn-lg btn-block" className="form-button"><h4>Sign in with Google</h4></Button><br />
+                    <Button type="submit" className="btn btn-lg btn-block" className="form-button"><h4>Sign in with Facebook</h4></Button><br />
+                    <Button type="submit" className="btn btn-lg btn-block" className="form-button"><h4>Sign in with Linkedin</h4></Button><br />
+                </div>
             </Form>
+
             <div>
                 {
                     allEntry.map((curElem) => {
@@ -70,6 +78,9 @@ export default function LoginPage() {
                     })
                 }
             </div>
+
+
+            <Footer />
 
         </>
     )
