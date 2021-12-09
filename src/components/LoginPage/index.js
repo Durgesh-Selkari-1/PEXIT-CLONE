@@ -63,7 +63,7 @@ export default function LoginPage() {
                 </div>
             </Form>
 
-            <div>
+            {/* <div>
                 {
                     allEntry.map((curElem) => {
 
@@ -77,7 +77,7 @@ export default function LoginPage() {
 
                     })
                 }
-            </div>
+            </div> */}
 
 
             <Footer />

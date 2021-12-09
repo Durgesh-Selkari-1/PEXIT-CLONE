@@ -1,45 +1,59 @@
-import React from 'react';
-import logo from './../../../src/assets/landingpage_img/logo.png'
-import {
-    Navbar,
-    NavItem,
-    NavbarToggler,
-    Collapse,
-    NavLink,
-    Nav,
-    NavbarBrand
-} from 'reactstrap';
+import React, { useState } from 'react';
+import './Header.css'
+import logo from './../../../src/assets/landingpage_img/logo.png';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
 export default function Header() {
-    // Collapse isOpen State
-    const [isOpen, setIsOpen] = React.useState(false)
-    return (
-        <body>
-            <header className="page-header fixed-top">
-                <div className="container-fluid">
 
-                    <Navbar color="" light expand="md" style={{ backgroundColor: '#B6B8BB' }} >
-                        <NavbarBrand href="/"><img src={logo} alt="Logo" /></NavbarBrand>
-                        <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
-                        <Collapse isOpen={isOpen} navbar>
-                            <Nav className="mr-auto" navbar style={{ marginLeft: '75%' }}>
-                                <NavItem >
-                                    <NavLink href="#">
-                                        <button type="button" className="btn btn-default btn-lg" style={{ backgroundColor: "white" }}>LogIn</button>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="#">
-                                        <button type="button" className="btn btn-default btn-lg" style={{ backgroundColor: "white" }} >Join Now</button>
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Navbar>
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
 
-                </div>
-            </header>
-        </body>
-    );
+  return (
+    <body>
+      <>
+        <nav className="main-nav">
+          <div className="logo" >
+            <h2>  <img src={logo} /> </h2>
+          </div>
+
+
+          <div
+            className={
+              showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+            }>
+            <ul>
+              <li>
+                <NavLink to="/"><button type="button" className="btn  btn-lg"><h1>Login</h1></button></NavLink>
+              </li>
+              <li>
+                <NavLink to="/"><button type="button" className="btn btn-light btn-lg "><h1>Join Now</h1></button></NavLink>
+              </li>
+            </ul>
+          </div>
+
+
+          <div className="social-media">
+            <div className="hamburger-menu">
+              <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+                <GiHamburgerMenu />
+              </a>
+            </div>
+          </div>
+        </nav>
+
+
+      </>
+      
+    </body>
+
+
+
+
+
+
+
+
+
+  );
 }
 
 

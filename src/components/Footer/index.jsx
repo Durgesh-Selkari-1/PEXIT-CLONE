@@ -1,10 +1,57 @@
-import React from 'react';
-import './footer.css'
+import React,{useState} from 'react';
+import './footer.css';
+
+
+import { NavLink } from "react-router-dom";
 export default function Footer() {
+
     return (
 
+        <body>
+     
+       <nav className="main-nav-f">
+     
+         <div className="logo-f">
+          <h1>Copyright @ 2020, PEXit</h1>
+         </div>
+ 
+         <div
+           className={
+              "menu-link-f mobile-menu-link-f" 
+           }>
+           <ul>
+             <li>
+               <NavLink to="/about">about</NavLink>
+             </li>
+             <li>
+               <NavLink to="/support">support</NavLink>
+             </li>
+             <li>
+               <NavLink to="/terms">terms</NavLink>
+             </li>
+             <li>
+               <NavLink to="/pricing">pricing</NavLink>
+             </li>
+             <li>
+               <NavLink to="/partners">partners</NavLink>
+             </li>
+             <li>
+               <NavLink to="/Language">Language</NavLink>
+             </li>
+           </ul>
+         </div>
+ 
+       
+        
+       </nav>
+ 
+       
+   
+     
+ 
+ 
         <div>
-            <footer className="page-footer fixed-bottom">
+            {/* <footer className="page-footer fixed-bottom">
                 <div className="navBar-">
                     <nav className="navbar navbar-expand-lg navbar-light" >
                         <a className="navbar-brand ml-20" href="#">Copyright @ 2020, PEXit</a>
@@ -43,8 +90,9 @@ export default function Footer() {
                         </div>
                     </nav>
                 </div>
-            </footer>
+            </footer> */}
         </div>
+        </body>
 
     );
 }
