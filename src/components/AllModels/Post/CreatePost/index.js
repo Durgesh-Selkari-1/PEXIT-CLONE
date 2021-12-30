@@ -7,7 +7,7 @@ export default function CreatePost() {
 
 
   return (
-    <>
+   <>
      
 
       <button type="button" className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -191,6 +191,6 @@ export default function CreatePost() {
           </div>
         </div>
       </div>
-    </>
+    </> 
   )
 }

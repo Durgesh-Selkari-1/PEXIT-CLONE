@@ -1,5 +1,4 @@
 import React from 'react';
-import { ThemeProvider } from "@material-ui/styles";
 import { Route, Switch,BrowserRouter, Redirect} from "react-router-dom";
 import LandingPage from './components/LandingPage';
 import LoginPage from './components/LoginPage';
