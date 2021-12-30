@@ -1,49 +1,66 @@
-import React, { useState } from 'react';
-import './Header.css'
+import React from 'react';
+import './Header.css';
 import logo from './../../../src/assets/landingpage_img/logo.png';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
 export default function Header() {
-
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
-
   return (
-    <body>
-      <>
-        <nav className="main-nav">
-          <div className="logo" >
-            <h2>  <img src={logo} /> </h2>
-          </div>
 
+    <header>
 
-          <div
-            className={
-              showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-            }>
-            <ul>
-              <li>
-                <NavLink to="/"><button type="button" className="btn  btn-lg"><h1>Login</h1></button></NavLink>
-              </li>
-              <li>
-                <NavLink to="/"><button type="button" className="btn btn-light btn-lg "><h1>Join Now</h1></button></NavLink>
-              </li>
-            </ul>
-          </div>
+     
+        <div className="container-fluid">
 
+          <div className='row '>
+            <div className='col-6  d-flex justify-content-start align-items-center'>
+            <a className="navbar-brand align-self-center" href="#">
+            <img src={logo} alt="logo" className="img-fluid" />
+          </a>
 
-          <div className="social-media">
-            <div className="hamburger-menu">
-              <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-                <GiHamburgerMenu />
-              </a>
             </div>
+            <div className='col-6 d-flex justify-content-end align-items-center ' >
+              <div className='align-self-center me-3'>
+              <button type="button" className="btn btn-light">Login</button>
+
+              </div>
+              <div className='align-self-center'>
+              <button type="button" className="btn btn-light">Join Now</button>
+
+              </div>
+
+            </div>
+
           </div>
-        </nav>
+
+        
+          {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon color-primary"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav header-navbar-nav-dev">
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#">
+                  <button type="button" className="btn btn-light header-btn-login-dev ">Login</button>
+
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  <button type="button" className="btn btn-light header-btn-JoinNow-dev">Join Now</button>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+ */}
+
+        </div>
+     
+
+    </header>
 
 
-      </>
-      
-    </body>
+
 
 
 

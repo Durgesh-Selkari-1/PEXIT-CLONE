@@ -3,11 +3,11 @@
     max-width:530px;
     margin: auto;
     border-radius: 0px;
-    margin: auto;
-   
+    margin: auto; 
     background-color: #b5b5b5;
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+    padding-bottom: 0.5px;
 }
 
 .form-input{
@@ -40,7 +40,14 @@
 
 .for-padding{
     margin-bottom:50px;
+    margin-top: 0px;
 }
+
+.for-padding div img{
+    margin-bottom:0px;
+    margin-top: 50px;
+}
+
 
 /* .or-style{
     margin: 3px;

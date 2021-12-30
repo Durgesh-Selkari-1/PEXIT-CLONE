@@ -1,98 +1,112 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './footer.css';
-
-
-import { NavLink } from "react-router-dom";
 export default function Footer() {
 
-    return (
+  return (
 
-        <body>
-     
-       <nav className="main-nav-f">
-     
-         <div className="logo-f">
-          <h1>Copyright @ 2020, PEXit</h1>
-         </div>
- 
-         <div
-           className={
-              "menu-link-f mobile-menu-link-f" 
-           }>
-           <ul>
-             <li>
-               <NavLink to="/about">about</NavLink>
-             </li>
-             <li>
-               <NavLink to="/support">support</NavLink>
-             </li>
-             <li>
-               <NavLink to="/terms">terms</NavLink>
-             </li>
-             <li>
-               <NavLink to="/pricing">pricing</NavLink>
-             </li>
-             <li>
-               <NavLink to="/partners">partners</NavLink>
-             </li>
-             <li>
-               <NavLink to="/Language">Language</NavLink>
-             </li>
-           </ul>
-         </div>
- 
-       
+
+    <>
+  <footer className='mt-0'>
+
+<div className='row w-100' >
+    <div className='col-md-5 my-3  d-flex justify-content-start align-items-center' >
+        <span className='m-0 p-0 h5 my-0 ms-3'>Copyright @ 2020, PEXit</span>
+    </div>
+    <div className='col-md-1 my-3  d-flex justify-content-center align-items-center'>
+        <span>
+            About
+        </span>
+
+    </div>
+    <div className='col-md-1 my-3  d-flex justify-content-center align-items-center'>
+        <span>Supports</span>
+
+    </div>
+    <div className='col-md-1 my-3  d-flex justify-content-center align-items-center'>
+        <span>Terms</span>
+
+    </div>
+    <div className='col-md-1 my-3  d-flex justify-content-center align-items-center'>
+        <span>Pricing</span>
+
+    </div>
+    <div className='col-md-1 my-3  d-flex justify-content-center align-items-center'>
+        <span>Partners</span>
+
+    </div>
+    <div className='col-md-1 my-2  d-flex justify-content-center align-items-center' >
+        <span>
+        <form>
+        <select className="form-select" aria-label="Default select example" style={{width:'auto',backgroundColor:'#dbdbdb',style:'none',borderStyle:'none'}}>
+                        <option selected>Language</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+        </form>
+    </span>
         
-       </nav>
- 
-       
-   
-     
- 
- 
-        <div>
-            {/* <footer className="page-footer fixed-bottom">
-                <div className="navBar-">
-                    <nav className="navbar navbar-expand-lg navbar-light" >
-                        <a className="navbar-brand ml-20" href="#">Copyright @ 2020, PEXit</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className=""></span>
-                        </button>
-                        <div className="" id="navbarSupportedContent">
-                            <ul className="navbar-nav">
-                                <li className="nav-item active">
-                                    <a className="nav-link text-dark" href="#">About</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#" >Support</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#" >Terms</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#" >Pricing</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark" href="#" >Partners</a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ color: 'black' }}>
-                                        Language
-                                    </a>
-                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a className="dropdown-item" href="#" >1</a>
-                                        <a className="dropdown-item" href="#" >2</a>
-                                        <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item text-dark" href="">3</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </footer> */}
-        </div>
-        </body>
 
-    );
+        </div>
+   
+
+
+
+</div>
+
+</footer>
+
+
+
+      {/* <footer>
+        <nav className="navbar navbar-expand-lg footer-bg-color-dev text-dark">
+          <div className="container-fluid" >
+            <a className="navbar-brand text-dark" href="#">
+              Copyright @ 2020, PEXit
+            </a>
+            <ul className="navbar-nav navbar-nav-footer-dev">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#"> Supports</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#"> Terms</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#"> Pricing</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#"> Partners</a>
+              </li>
+              <li className="nav-item dropup">
+               
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a className="dropdown-item" href="#">Hindi</a></li>
+                  <li><a className="dropdown-item" href="#">English</a></li>
+                  <li><hr className="dropdown-divider"/></li>
+                  <li><a className="dropdown-item" href="#">Others</a></li>
+                </ul>
+              </li>
+            </ul>
+
+
+
+          </div>
+        </nav>
+      </footer> */}
+  
+
+
+    </>
+
+
+
+
+  );
 }

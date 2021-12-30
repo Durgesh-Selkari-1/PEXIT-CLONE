@@ -1,0 +1,3 @@
+form .message-input-palceholder-dev input::placeholder{
+    font-size: small;
+}
