@@ -19,6 +19,7 @@ import Products from './components/Products/Products';
 import RightSidebar from './components/RightSidebar';
 import UserPost from './components/Post/UserPost';
 import Dashboard2 from './components/Dashboard2/Dashboard2';
+import LeftSidebar1 from './components/Left_Sidebar/LeftSidebar1';
 
 
 
@@ -47,10 +48,11 @@ export default function Routes() {
                 <Route exact path="/RightSidebar" component={RightSidebar}/>
                 <Route exact path="/UserPost" component={UserPost}/>
                 <Route exact path="/Dashboard2" component={Dashboard2}/>
+                <Route exact path="/LeftSidebar1" component={LeftSidebar1}/>
             </Switch>
         </BrowserRouter>        
     );
-
+  
 
    
 }

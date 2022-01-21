@@ -19,12 +19,15 @@
 
 footer{
   
- position: sticky;
+
   z-index: 100;
   background-color:#dbdbdb;
   margin: 0;
   padding: 0;
   bottom: 0;
+  position: fixed;
+  width: 100%;
+  
 }
 
 .footer-list-dev li{

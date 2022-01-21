@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import logo from './../../../src/assets/landingpage_img/logo.png';
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
     <header>
 
      
-        <div className="container-fluid">
+        <div className="container-fluid w-100">
 
           <div className='row '>
             <div className='col-6  d-flex justify-content-start align-items-center'>
@@ -18,11 +19,18 @@ export default function Header() {
             </div>
             <div className='col-6 d-flex justify-content-end align-items-center ' >
               <div className='align-self-center me-3'>
-              <button type="button" className="btn btn-light">Login</button>
+           <Link to="/login" >
+           <button type="button" className="btn btn-light">Login</button>
+           
+           </Link>
 
               </div>
+
               <div className='align-self-center'>
-              <button type="button" className="btn btn-light">Join Now</button>
+                <Link to="/SignUpPage">
+                <button type="button" className="btn btn-light">Join Now</button>
+
+                </Link>
 
               </div>
 
