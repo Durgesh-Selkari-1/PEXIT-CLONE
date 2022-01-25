@@ -31,7 +31,7 @@ class SiderDemo extends React.Component {
     this.setState({ collapsed });
 
   };
- onChange1(e) {
+  onChange1(e) {
     console.log(`checked = ${e.target.checked}`);
   }
   onChange2(e) {
@@ -43,7 +43,7 @@ class SiderDemo extends React.Component {
   onChange4(e) {
     console.log(`checked = ${e.target.checked}`);
   }
-  
+
 
 
   render() {
@@ -133,23 +133,24 @@ class SiderDemo extends React.Component {
               <Menu.Item key="5" style={{ background: 'none', color: 'white' }}>Content 3</Menu.Item>
             </SubMenu>
 
-            <Menu.Item key="4" style={{ background: 'none', color: '', height: 200 }} >
+            <Menu.Item key="4" style={{ background: 'none', color: 'white', height: 200 }} >
 
               <NavLink
                 to='#'
               >
-                <div className='d-flex flex-column ms-3 justify-content-start bg-primary'>
-                <Checkbox className='ms-2' onChange={this.onChange1}>GVR @SST USA</Checkbox>
-                <Checkbox onChange={this.onChange2}>PEXit</Checkbox>
-                <Checkbox onChange={this.onChange3}>Guna</Checkbox>
-                <Checkbox onChange={this.onChange4}>Ram</Checkbox>
-                </div>
                 <div>
 
-                <Space direction="vertical">
-    <Search placeholder="input search text" onSearch={onSearch} style={{ width: 100 }} />
-    </Space>
+                  <Space direction="vertical">
+                    <Search placeholder="search" className='mx-auto' onSearch={onSearch} />
+                  </Space>
                 </div>
+                <div className='d-flex flex-column ms-3 justify-content-start '>
+                  <Checkbox className='ms-2 text-light' onChange={this.onChange1}>GVR @SST USA</Checkbox>
+                  <Checkbox className='text-light' onChange={this.onChange2}>PEXit</Checkbox>
+                  <Checkbox className='text-light' onChange={this.onChange3}>Guna</Checkbox>
+                  <Checkbox className='text-light' onChange={this.onChange4}>Ram</Checkbox>
+                </div>
+
               </NavLink>
             </Menu.Item>
 
